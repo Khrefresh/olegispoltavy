@@ -70,6 +70,19 @@
   .cta:active{transform:scale(.97)}
   .cta svg{width:20px;height:20px}
 
+  .event{display:block;position:relative;overflow:hidden;margin-bottom:14px;padding:18px;border-radius:22px;text-decoration:none;color:var(--text);
+    background:linear-gradient(150deg,#1d2a14 0%,#15170f 55%,#121214 100%);border:1px solid #8dc63f66;box-shadow:0 12px 36px -14px rgba(141,198,63,.45);transition:transform .2s}
+  .event:active{transform:scale(.985)}
+  .event:focus-visible{outline:2px solid #8dc63f;outline-offset:3px}
+  .ev-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .ev-tag{font:700 10.5px Manrope,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#0b0d0b;background:#8dc63f;padding:5px 9px;border-radius:999px}
+  .ev-brand{font:700 12px Unbounded,Manrope,system-ui,sans-serif;color:#8dc63f}
+  .event h2{font:700 19px/1.25 Unbounded,Manrope,system-ui,sans-serif;margin-bottom:6px}
+  .ev-sub{font-size:13.5px;color:#C9CEC4;line-height:1.45}
+  .ev-meta{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+  .ev-meta span{font:600 12.5px Manrope,system-ui,sans-serif;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:10px}
+  .ev-btn{display:flex;justify-content:center;align-items:center;gap:8px;background:#8dc63f;color:#0b0d0b;font:800 15.5px Manrope,system-ui,sans-serif;padding:14px;border-radius:14px}
+  .ev-btn svg{width:16px;height:16px}
   .label{font:600 11px Manrope,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:28px 4px 12px}
 
   .card{display:flex;align-items:center;gap:14px;padding:14px;border-radius:20px;background:var(--card);
@@ -141,6 +154,14 @@
     </div>
   </header>
 
+  <a class="event in" id="event" style="animation-delay:.26s" href="https://tally.so/r/aO5JyX" data-go="kolo_register" target="_blank" rel="noopener">
+    <div class="ev-top"><span class="ev-tag" data-t="ev_tag">Реєстрація відкрита</span><span class="ev-brand">KOLO 421</span></div>
+    <h2>E-commerce 2027</h2>
+    <div class="ev-sub" data-t="ev_sub">Що буде продавати, а що вже ні + живий розбір ваших бізнесів. Спікер — Тарас Герасимюк, засновник ECOM-X.</div>
+    <div class="ev-meta"><span data-t="ev_date">6 грудня · 14:00</span><span data-t="ev_place">Братислава</span><span>50 €</span><span data-t="ev_seats">30 місць</span></div>
+    <div class="ev-btn"><span data-t="ev_btn">Зареєструватися</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+  </a>
+
   <a class="cta in" style="animation-delay:.28s" data-go="form" href="https://tally.so/r/PR9EDd" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     <span data-t="cta">Співпраця / написати мені</span>
@@ -182,9 +203,6 @@
     <div class="txt"><b>KOLO 421</b><span data-t="kolo">Бізнес-події та лекції для українців у Братиславі</span></div>
     <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
   </a>
-  <div class="sub in" style="--c:#EF7A5C;animation-delay:.48s">
-    <a href="https://tally.so/r/aO5JyX" data-go="kolo_register" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3a3 3 0 0 0 0-6V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg><span data-t="register">Реєстрація: E-commerce 2027</span></a>
-  </div>
 
   <div class="card soon in" style="--c:#B79CFF;animation-delay:.52s">
     <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
@@ -203,17 +221,17 @@
         cta:"Співпраця / написати мені",jobs:"Робота для монтажників",jobs_d:"Анкета субпідрядника · Німеччина та Європа",hiring:"Набір",projects:"Мої проєкти",kahabau:"KH-Bau s. r. o. · монтаж магазинів та Ladenbau по всій Європі",sup:"Постачальники для інтер'єру",sup_d:"Анкета для виробників і постачальників",
         khrefresh:"Хімчистка диванів і матраців з виїздом · Братислава",order:"Замовити чистку — калькулятор ціни",
         new:"Нове",kolo:"Бізнес-події та лекції для українців у Братиславі",register:"Реєстрація: E-commerce 2027",
-        studio:"Дизайн-студія",soon:"Скоро · Братислава",copied:"Посилання скопійовано"},
+        studio:"Дизайн-студія",ev_tag:"Реєстрація відкрита",ev_sub:"Що буде продавати, а що вже ні + живий розбір ваших бізнесів. Спікер — Тарас Герасимюк, засновник ECOM-X.",ev_date:"6 грудня · 14:00",ev_place:"Братислава",ev_seats:"30 місць",ev_btn:"Зареєструватися",soon:"Скоро · Братислава",copied:"Посилання скопійовано"},
     en:{name:"Oleh from Poltava",bio:"Blogger & entrepreneur 🇺🇦 → 🇪🇺 Building businesses in Europe and showing how it works from the inside.",
         cta:"Collaboration / message me",jobs:"Jobs for installers",jobs_d:"Subcontractor application · Germany & Europe",hiring:"Hiring",projects:"My projects",kahabau:"KH-Bau s. r. o. · shop-fitting & retail installation across Europe",sup:"Interior suppliers",sup_d:"Application for manufacturers & suppliers",
         khrefresh:"On-site sofa & mattress cleaning · Bratislava",order:"Book a cleaning — price calculator",
         new:"New",kolo:"Business events & talks for Ukrainians in Bratislava",register:"Sign up: E-commerce 2027",
-        studio:"Design studio",soon:"Coming soon · Bratislava",copied:"Link copied"},
+        studio:"Design studio",ev_tag:"Registration open",ev_sub:"What will sell in 2027 and what won't + live review of your businesses. Speaker: Taras Herasymiuk, founder of ECOM-X. In Ukrainian.",ev_date:"6 December · 14:00",ev_place:"Bratislava",ev_seats:"30 seats",ev_btn:"Register",soon:"Coming soon · Bratislava",copied:"Link copied"},
     de:{name:"Oleh aus Poltawa",bio:"Blogger & Unternehmer 🇺🇦 → 🇪🇺 Ich baue Unternehmen in Europa auf und zeige, wie es von innen läuft.",
         cta:"Kooperation / schreib mir",jobs:"Jobs für Monteure",jobs_d:"Bewerbung als Subunternehmer · Deutschland & Europa",hiring:"Wir suchen",projects:"Meine Projekte",kahabau:"KH-Bau s. r. o. · Ladenbau & Montage in ganz Europa",sup:"Lieferanten für Innenausbau",sup_d:"Bewerbung für Hersteller & Lieferanten",
         khrefresh:"Polster- & Matratzenreinigung vor Ort · Bratislava",order:"Reinigung buchen — Preisrechner",
         new:"Neu",kolo:"Business-Events & Vorträge für Ukrainer in Bratislava",register:"Anmeldung: E-commerce 2027",
-        studio:"Designstudio",soon:"Bald · Bratislava",copied:"Link kopiert"}
+        studio:"Designstudio",ev_tag:"Anmeldung offen",ev_sub:"Was 2027 verkauft und was nicht mehr + Live-Analyse eurer Shops. Speaker: Taras Herasymiuk, Gründer von ECOM-X. Auf Ukrainisch.",ev_date:"6. Dezember · 14:00",ev_place:"Bratislava",ev_seats:"30 Plätze",ev_btn:"Anmelden",soon:"Bald · Bratislava",copied:"Link kopiert"}
   };
   var lang="uk";
   try{var s=localStorage.getItem("lang");if(s&&T[s])lang=s;else{var n=(navigator.language||"").slice(0,2);
@@ -246,6 +264,7 @@
     else{(navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){
       toast.textContent=T[lang].copied;toast.classList.add("show");setTimeout(function(){toast.classList.remove("show")},1800);}).catch(function(){});}
   };
+  try{if(Date.now()>Date.parse("2026-12-06T17:00:00+01:00")){var ev=document.getElementById("event");if(ev)ev.remove();}}catch(e){}
   document.getElementById("y").textContent=new Date().getFullYear();
 })();
 </script>
